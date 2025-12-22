@@ -94,9 +94,4 @@ def differ(TargetA: list | tuple | set, TargetB: list | tuple | set) -> list | t
     else:
         #Code goes here
 
-__all__ = [
-    "merge",
-    "removeduplicates",
-    "remove",
-    "differ"
-]
+__all__ = ["merge","removeduplicates","remove","differ"]

@@ -19,3 +19,8 @@ def subtract(A: list, B: list):
             B.remove(i)
             A.remove(i)
     return A
+
+def subtractboth(A: list, B: list):
+    """
+    test
+    """

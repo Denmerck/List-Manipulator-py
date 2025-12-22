@@ -1,18 +1,9 @@
 """
-Data Manager Library Module
+List Manipulator Module
 
-Made to Manipulate Lists, Dictionaries, Sets and Tuples.
+Offers variety of modules to manipulator
 
-Importing this module to your code by
-    import datmgrlib as ll
+List, Dictionary, and Set have separate modules
 
 Made by a high school student!
-
-*note: some functions may only support 3-1 types or might be buggy*
 """
-import datmgrlib.apiv001
-from datmgrlib.apiv001 import *
-
-__all__ = datmgrlib.apiv001.__all__
-
-__version__ = "0.0.1"

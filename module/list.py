@@ -131,3 +131,5 @@ def replaceitems(A: list, target: any, value: any) -> list:
         else:
             A.append(i)
     return A
+
+# Module testing

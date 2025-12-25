@@ -246,5 +246,3 @@ def wipe(A: list, amount: int | None = None) -> list:
         except IndexError:
             return []
     return A
-
-# Module testing

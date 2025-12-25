@@ -162,8 +162,10 @@ def snap(A: list, index: int) -> list:
     """
     Snaps a list in after index into 2 list.\n
 
-    :param A:
-    :param args:
+    :param A: Target list
+    :type A: list
+    :param index: Snap position
+    :type index: int
     :return:
     """
     cacheA = list.copy(A)

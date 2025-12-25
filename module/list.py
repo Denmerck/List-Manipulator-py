@@ -1,4 +1,3 @@
-# Word "List" count: 164
 """
 Library of list manipulation functions
 """
@@ -40,7 +39,7 @@ def subtractboth(A: list, B: list) -> list:
 def mergeitems(A: list) -> list:
     """
     Merges (or removes) duplicate items in a list.\n
-    
+
     :param A: Target list
     :type A: list
 
@@ -78,7 +77,7 @@ def flatten(A: list) -> list:
 def killitems(A: list, *values) -> list:
     """
     Removes all occurrence of a value in a list.\n
-    
+
     :param A: Target list
     :type A: list
     :param value: Value(s) to be cleared off
@@ -94,7 +93,7 @@ def killitems(A: list, *values) -> list:
 def replace(A: list, index: int, value: any) -> list:
     """
     Replaces the index with the value\n
-    
+
     :param A: Target list
     :type A: list
     :param index: Index to replace
@@ -133,12 +132,12 @@ def replaceitems(A: list, target: any, value: any) -> list:
 def zip(A: list, B: list) -> list:
     """
     Zips a list\n
-    
+
     :param A: Target list
     :param B: Target list
     :type A: list
     :type B: list
-    :return: 
+    :return:
     """
     cacheA = list.copy(A)
     iterA = iter(cacheA)
@@ -171,7 +170,7 @@ def snap(A: list, index: int) -> list:
     :type A: list
     :param index: Snap position
     :type index: int
-    :return:
+    :return: Snapped list
     """
     cacheA = list.copy(A)
     cacheB = []
@@ -184,6 +183,68 @@ def snap(A: list, index: int) -> list:
             cacheC.append(i)
     A.append(cacheB)
     A.append(cacheC)
+    return A
+
+def push(A: list, *args: any) -> list:
+    """
+    Pushes values in the list\n
+    :param A: Target list
+    :type A: list
+    :param args: values
+    :type args: any
+    :return: Pushed list
+    """
+    for i in args:
+        A.append(i)
+    return A
+
+def mergelist(A: list, B: list) -> list:
+    """
+    Merges two lists, disposes duplicates\n
+    :param A: Target list
+    :type A: list
+    :param B: Target list
+    :type B: list
+    :return: Merged list
+    """
+    for i in B:
+        if i not in A:
+            A.append(i)
+    return A
+
+def flood(A: list, amount: int, value: any) -> list:
+    """
+    Floods a list with values\n
+    :param A: Target list
+    :type A: list
+    :param amount: Flood amount
+    :type amount: int
+    :param value: Flood value
+    :type value: any
+    :return: Flooded list
+    """
+    i = 0
+    while i <= amount:
+        A.append(value)
+        i += 1
+    return A
+
+def wipe(A: list, amount: int | None = None) -> list:
+    """
+    Wipes a certain amount of items in a list, no amount value will wipe all contents.
+    :param A: Target list
+    :type A: list
+    :param amount: Number of items to wipe
+    :type amount: int
+    :return: Wiped list
+    """
+    if amount == None:
+        return []
+    for i in range(amount):
+        try:
+            A.pop(-1)
+        except IndexError:
+            return []
     return A
 
 # Module testing

@@ -130,7 +130,28 @@ def replaceitems(A: list, target: any, value: any) -> list:
             A.append(i)
     return A
 
-# Module testing
+def shift(A: list, count: int) -> list:
+    pass
+    """
+    Shifts a list\n
 
-testa = [1, 2, "Elanor", "Boyle", "Peralta"]
-print(killitems(testa, "Boyle", "Elanor"))
+    :param A: Target list
+    :type A: list
+    :param count: Number of items to be shifted
+    :type count: int
+    :return:
+    """
+
+def zip(A: list, B: list) -> list:
+    pass
+    """
+    Zips a list\n
+    
+    :param A: Target list
+    :param B: Target list
+    :type A: list
+    :type B: list
+    :return: 
+    """
+
+# Module testing

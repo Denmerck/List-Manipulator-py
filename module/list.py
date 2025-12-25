@@ -272,8 +272,3 @@ def tuplise(A: list) -> tuple:
     :return: Tuple
     """
     return tuple(A)
-
-listA = ["67", "Loblaws", ":P", ":3", 67, 67, 67 ,67 ,67]
-listB = ["41", "Loblaws", ":D", ":3"]
-
-print(tuplise(listA))

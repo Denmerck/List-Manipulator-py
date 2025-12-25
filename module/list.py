@@ -246,3 +246,34 @@ def wipe(A: list, amount: int | None = None) -> list:
         except IndexError:
             return []
     return A
+
+def clip(A: list, beginningindex: int, endindex: int) -> list:
+    """
+    Clips a list and returns as a 2 list\n
+    :param A: Target list
+    :type A: list
+    :param beginningindex: Starting index
+    :type beginningindex: int
+    :param endindex: Ending index
+    :type endindex: int
+    :return:
+    """
+    cacheA = list.copy(A)
+    clipped = A[beginningindex:endindex]
+    for i in clipped:
+        A.remove(i)
+    return [A, clipped]
+
+def tuplise(A: list) -> tuple:
+    """
+    Tuples a list\n
+    :param A: Target list
+    :type A: list
+    :return: Tuple
+    """
+    return tuple(A)
+
+listA = ["67", "Loblaws", ":P", ":3", 67, 67, 67 ,67 ,67]
+listB = ["41", "Loblaws", ":D", ":3"]
+
+print(tuplise(listA))

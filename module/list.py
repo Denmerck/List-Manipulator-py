@@ -130,20 +130,7 @@ def replaceitems(A: list, target: any, value: any) -> list:
             A.append(i)
     return A
 
-def shift(A: list, count: int) -> list:
-    pass
-    """
-    Shifts a list\n
-
-    :param A: Target list
-    :type A: list
-    :param count: Number of items to be shifted
-    :type count: int
-    :return:
-    """
-
 def zip(A: list, B: list) -> list:
-    pass
     """
     Zips a list\n
     
@@ -153,10 +140,28 @@ def zip(A: list, B: list) -> list:
     :type B: list
     :return: 
     """
-    iter(A)
-    iter(B)
+    cacheA = list.copy(A)
+    iterA = iter(cacheA)
+    iterB = iter(B)
+    print(iterA)
+    lenA = len(A)
+    lenB = len(B)
     A.clear()
-    for i in cacheA:
+    i = 0
+    try:
+        while i <= max(lenA, lenB):
+            i += 1
+            A.append([next(iterA), next(iterB)])
+    except StopIteration:
+        while True:
+            try:
+                A.append([next(iterA)])
+            except StopIteration:
+                try:
+                    A.append([next(iterB)])
+                except StopIteration:
+                    return A
+    return A
 
 def snap(A: list, index: int) -> list:
     """
@@ -182,7 +187,3 @@ def snap(A: list, index: int) -> list:
     return A
 
 # Module testing
-
-listA = ["67", "Loblaws", ":P", ":3"]
-
-print(snap(listA, 1))

@@ -133,4 +133,4 @@ def replaceitems(A: list, target: any, value: any) -> list:
 # Module testing
 
 testa = [1, 2, "Elanor", "Boyle", "Peralta"]
-print(killitems(testa, "Boyle", "Peralta"))
+print(killitems(testa, "Boyle", "Elanor"))

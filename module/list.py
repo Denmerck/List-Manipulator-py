@@ -6,13 +6,12 @@ Library of list manipulation functions
 def subtract(A: list, B: list) -> list:
     """
     Removes the matching items\n
-    eg.\n
-        [a, b, c, d, d] - [a, c, e, d] = [a, b, d]
 
     :param A: Minuend
     :type A: list
     :param B: Subtrahend
     :type B: list
+    :return: Updated list
     """
     for i in A:
         if i in B:
@@ -23,12 +22,12 @@ def subtract(A: list, B: list) -> list:
 def subtractboth(A: list, B: list) -> list:
     """
     Removes the matching items then passes the remaining.\n
-    eg.\n
-        [a, b, c, d, d] - [a, c, e, d, u] = [a, b, d, u]
+
     :param A: Minuend
     :type A: list
     :param B: Subtrahend
     :type B: list
+    :return: Updated list
     """
     cacheA = list.copy(A)
     for i in cacheA:
@@ -40,12 +39,12 @@ def subtractboth(A: list, B: list) -> list:
 
 def mergeitems(A: list) -> list:
     """
-    Merges (or removes) duplicates in a list.\n
-    eg.\n
-        [13, 64, "Nine", "Nine", "Holt"] -> [13, 64, "Nine", "Holt"]
+    Merges (or removes) duplicate items in a list.\n
     
     :param A: Target list
     :type A: list
+
+    :return: Updated list
     """
 
     cacheA = []
@@ -59,13 +58,11 @@ def mergeitems(A: list) -> list:
 
 def flatten(A: list) -> list:
     """
-    Flattens list that contains a list as its child.\n
-    *Only affects the target list's child\n
-    eg.\n
-        [23, 95, ["Peralta", "76", True], "Manila"] -> [23, 95, "Peralta", "76", True, "Manila"]
+    Pops all items in a child's list
 
     :param A: Target list
     :type A: list
+    :return: Flattened list
     """
 
     cacheA = list.copy(A)
@@ -81,13 +78,12 @@ def flatten(A: list) -> list:
 def killitems(A: list, value: any) -> list:
     """
     Removes all occcurrences of a value in a list.\n
-    eg.\n
-        ["Non", "Non", "NUL", "Few"] -> ["NUL", "Few"]
     
     :param A: Target list
     :type A: list
     :param value: Value(s) to be cleared off
     :type value: any
+    :return: Updated list
     """
     cacheA = A.copy()
     for i in cacheA:
@@ -98,8 +94,6 @@ def killitems(A: list, value: any) -> list:
 def replace(A: list, index: int, value: any) -> list:
     """
     Replaces the index with the value\n
-    eg.\n
-        ["Barbershop", "Haircut", "Cost", "Dollar"] -> ["Barbershop", "Haircut", "Cost", "Quarter"]
     
     :param A: Target list
     :type A: list
@@ -107,6 +101,8 @@ def replace(A: list, index: int, value: any) -> list:
     :type index: int
     :param value: Replacement Value
     :type value: any
+
+    :return: Updated list
     """
     A.pop(index)
     A.insert(index, value)
@@ -114,14 +110,16 @@ def replace(A: list, index: int, value: any) -> list:
 
 def replaceitems(A: list, target: any, value: any) -> list:
     """
-    Replaces all occurrence of target with the value\n
-    eg.\n
-        ["Loblaws", "Loblaws", "Canadia", "Loblaws", "Chat"] ->\n["CityMarket", "CityMarket", "Canadia", "CityMarket", "Chat"]
-    
-    :param A: Target
+    Replaces all items in a list
+
+    :param A: Target list
     :type A: list
-    :param target: Description
+    :param target: Target item
     :type target: any
+    :param value: Replacement Value
+    :type value: any
+
+    :return: Updated list
     """
     cacheA = list.copy(A)
     A.clear()

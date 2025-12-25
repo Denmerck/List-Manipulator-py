@@ -75,19 +75,19 @@ def flatten(A: list) -> list:
             A.append(i)
     return A
 
-def killitems(A: list, value: any) -> list:
+def killitems(A: list, *values) -> list:
     """
     Removes all occcurrences of a value in a list.\n
     
     :param A: Target list
     :type A: list
     :param value: Value(s) to be cleared off
-    :type value: any
+    :type value: args
     :return: Updated list
     """
     cacheA = A.copy()
     for i in cacheA:
-        if i == value:
+        if i in values:
             A.remove(i)
     return A
 
@@ -131,3 +131,6 @@ def replaceitems(A: list, target: any, value: any) -> list:
     return A
 
 # Module testing
+
+testa = [1, 2, "Elanor", "Boyle", "Peralta"]
+print(killitems(testa, "Boyle", "Peralta"))

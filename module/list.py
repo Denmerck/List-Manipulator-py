@@ -77,7 +77,7 @@ def flatten(A: list) -> list:
 
 def killitems(A: list, *values) -> list:
     """
-    Removes all occcurrences of a value in a list.\n
+    Removes all occurrence of a value in a list.\n
     
     :param A: Target list
     :type A: list
@@ -153,5 +153,34 @@ def zip(A: list, B: list) -> list:
     :type B: list
     :return: 
     """
+    iter(A)
+    iter(B)
+    A.clear()
+    for i in cacheA:
+
+def snap(A: list, index: int) -> list:
+    """
+    Snaps a list in after index into 2 list.\n
+
+    :param A:
+    :param args:
+    :return:
+    """
+    cacheA = list.copy(A)
+    cacheB = []
+    cacheC = []
+    A.clear()
+    for i in cacheA:
+        if cacheA.index(i) <= index:
+            cacheB.append(i)
+        elif cacheA.index(i) > index:
+            cacheC.append(i)
+    A.append(cacheB)
+    A.append(cacheC)
+    return A
 
 # Module testing
+
+listA = ["67", "Loblaws", ":P", ":3"]
+
+print(snap(listA, 1))

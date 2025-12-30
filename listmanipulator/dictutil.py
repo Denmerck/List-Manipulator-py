@@ -14,14 +14,3 @@ def reversekeys(A: dict) -> dict:
     for key, value in cacheA.items():
         A.update({key: value})
     return A
-
-def merge(A: dict, key1: any, key2: any) -> dict:
-    """
-    Merge two dictionaries. (Key <-> value)
-    :param A: Target dict
-    :param key1: First key
-    :param key2: Second key
-    :return:
-    """
-    pass
-    cacheA = A.copy()

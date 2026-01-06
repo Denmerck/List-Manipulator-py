@@ -14,3 +14,38 @@ def reversekeys(A: dict) -> dict:
     for key, value in cacheA.items():
         A.update({key: value})
     return A
+
+
+def removevalue(A: dict, value: any) -> dict:
+    """
+    Remove a value from a dictionary.
+    :param A: Target dict
+    :param value: Value to remove
+    :return:
+    """
+    for k, v in A.items():
+        if v == value:
+            A.pop(k)
+    return A
+
+def values(A: dict)-> list:
+    """
+    Get all values in a dictionary.
+    :param A: Target dict
+    :return:
+    """
+    values = []
+    for k, v in A.items():
+        values.append(v)
+    return values
+
+def keys(A: dict) -> list:
+    """
+    Get all keys in a dictionary.
+    :param A: Target dict
+    :return:
+    """
+    values = []
+    for k, v in A.items():
+        values.append(k)
+    return values

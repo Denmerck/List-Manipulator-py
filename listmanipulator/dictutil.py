@@ -12,7 +12,7 @@ def reversekeys(A: dict) -> dict:
     cacheA = A.copy()
     A.clear()
     for key, value in cacheA.items():
-        A.update({key: value})
+        A.update({value: key})
     return A
 
 

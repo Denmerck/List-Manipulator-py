@@ -49,3 +49,15 @@ def keys(A: dict) -> list:
     for k, v in A.items():
         values.append(k)
     return values
+
+def findvalue(A: dict, value: list) -> str:
+    """
+    Finds a value and returns a key.
+    :param A: Target dict
+    :param value: value to find
+    :return:
+    """
+    for k, v in A.items():
+        if v == value:
+            return k
+    return None

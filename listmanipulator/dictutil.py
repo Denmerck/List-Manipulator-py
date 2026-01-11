@@ -4,10 +4,10 @@ Library of dictionary manipulation functions
 
 def swap(A: dict) -> dict:
     """
-    Reverse the pairs of a dictionary. (Key <-> value)
+    Swap the pairs of a dictionary. (Key <-> value)
     :param A: Target dict
     :type A: dict
-    :return: Reversed dictionary
+    :return:
     """
     cacheA = A.copy()
     A.clear()

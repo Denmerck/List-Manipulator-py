@@ -1,5 +1,5 @@
 """
-Library of dictionary manipulation functions
+Library of Dictionary Manipulation Functions
 """
 
 def swap(Dict: dict) -> dict:
@@ -88,3 +88,16 @@ def flatten(Dict: dict) -> dict:
             return Dict
         else:
             return Dict
+
+def toDict(List: list, Keys: list) -> dict:
+    """
+    Takes 2 list and merge them into a dictionary.
+
+    :param List: List of items
+    :param Keys: List of keys
+    :return:
+    """
+    dict = {}
+    for i in range(max(len(List), len(Keys))):
+        dict.update({Keys[i]: List[i]})
+    return dict

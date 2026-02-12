@@ -1,5 +1,5 @@
 """
-Library of list manipulation functions
+Library of List Manipulation Functions
 """
 
 def subtract(A: list, B: list) -> list:
@@ -18,7 +18,7 @@ def subtract(A: list, B: list) -> list:
             A.remove(i)
     return A
 
-def subtractboth(A: list, B: list) -> list:
+def subtractBoth(A: list, B: list) -> list:
     """
     Removes the matching items then passes the remaining.\n
 
@@ -36,7 +36,7 @@ def subtractboth(A: list, B: list) -> list:
             A.remove(i)
     return A + B
 
-def mergeitems(A: list) -> list:
+def mergeItems(A: list) -> list:
     """
     Merges (or removes) duplicate items in a list.\n
 
@@ -74,7 +74,7 @@ def flatten(A: list) -> list:
             A.append(i)
     return A
 
-def killitems(A: list, *values) -> list:
+def killItems(A: list, *values) -> list:
     """
     Removes all occurrence of a value in a list.\n
 
@@ -107,7 +107,7 @@ def replace(A: list, index: int, value: any) -> list:
     A.insert(index, value)
     return A
 
-def replaceitems(A: list, target: any, value: any) -> list:
+def replaceItems(A: list, target: any, value: any) -> list:
     """
     Replaces all items in a list
 
@@ -198,7 +198,7 @@ def push(A: list, *args: any) -> list:
         A.append(i)
     return A
 
-def mergelist(A: list, B: list) -> list:
+def mergeList(A: list, B: list) -> list:
     """
     Merges two lists, disposes duplicates\n
     :param A: Target list
@@ -275,16 +275,16 @@ def tuplise(A: list) -> tuple:
 
 __all__ = [
     'subtract',
-    'subtractboth',
-    'mergeitems',
+    'subtractBoth',
+    'mergeItems',
     'flatten',
-    'killitems',
+    'killItems',
     'replace',
-    'replaceitems',
+    'replaceItems',
     'zip',
     'snap',
     'push',
-    'mergelist',
+    'mergeList',
     'flood',
     'wipe',
     'clip',
